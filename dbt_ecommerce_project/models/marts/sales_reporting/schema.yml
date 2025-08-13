@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: customer_lifetime_value
+    columns:
+      - name: customer_id
+        tests: [not_null, unique]
+      - name: total_orders
+        tests: [not_null]
+      - name: total_revenue
+        tests: [not_null]
+
+  - name: category_performance
+    columns:
+      - name: category
+        tests: [not_null]
+
+  - name: monthly_revenue_orders
+    columns:
+      - name: month
+        tests: [not_null]
+
+  - name: customer_order_frequency
+    columns:
+      - name: customer_id
+        tests: [not_null]
